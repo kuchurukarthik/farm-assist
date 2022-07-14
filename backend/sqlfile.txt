@@ -1,0 +1,58 @@
+drop  table if exists farmer;
+
+
+CREATE TABLE farmer (
+	id serial PRIMARY KEY,
+	email VARCHAR ( 50 ) UNIQUE NOT NULL,
+	first_name VARCHAR ( 50 ) NOT NULL,
+	last_name VARCHAR ( 50 ) NOT NULL,
+	phone_number VARCHAR (10) not null,
+	role varchar(20) not null
+);
+
+insert into farmer (email, first_name, last_name, phone_number, role)
+	values ('farmer1@gmail.com', 'farmer1', 'last1', '9999999999','farmer');
+
+
+drop  table if exists trader;
+
+
+CREATE TABLE trader (
+	id serial PRIMARY KEY,
+	email VARCHAR ( 50 ) UNIQUE NOT NULL,
+	first_name VARCHAR ( 50 ) NOT NULL,
+	last_name VARCHAR ( 50 ) NOT NULL,
+	phone_number VARCHAR (10) not null,
+	role varchar(20) not null,
+	verified bool not null
+);
+
+insert into trader (email, first_name, last_name, phone_number, role, verified)
+	values ('trader1@gmail.com', 'trader1', 'last1', '9999999999','trader',false);
+
+
+drop table if exists admin;
+
+CREATE TABLE admin (
+	id serial PRIMARY KEY,
+	email VARCHAR ( 50 ) UNIQUE NOT NULL,
+	role varchar(20) not null
+);
+
+insert into admin (email, role) values ('admin@gmail.com', 'admin');
+
+
+drop table if exists yield;
+
+CREATE TABLE yield (
+	productid serial PRIMARY KEY,
+	product_name VARCHAR ( 50 ) NOT NULL,
+	posted_price bigint not null,
+	quantity bigint not null,
+	seller bigint not null,
+	available bool not null,
+	buyer bigint,
+	quotes jsonb
+);
+
+select * from yield
