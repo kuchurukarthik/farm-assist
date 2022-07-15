@@ -1,4 +1,4 @@
-# farm-assist
+# farm-assist (work in progress)
 Farm Assist Project Source Code
 This Repository has the source code for Farm Assist Project.
 
