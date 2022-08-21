@@ -1,0 +1,290 @@
+{
+	"info": {
+		"_postman_id": "16bfdcf3-44d1-4fd0-9f38-eeece52d39a2",
+		"name": "farm-assist",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10454018"
+	},
+	"item": [
+		{
+			"name": "getAllFarmers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/farmers/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"farmers",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllTraders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/traders/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"traders",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllYields",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/yield/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"yield",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createNewFarmer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user6@gmail.com\",\r\n    \"firstName\": \"user8\",\r\n    \"lastName\": \"last\",\r\n    \"phoneNumber\": 99999999,\r\n    \"role\": \"farmer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/farmers/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"farmers",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createNewTrader",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"trader12@gmail.com\",\r\n    \"firstName\": \"user12\",\r\n    \"lastName\": \"last12\",\r\n    \"phoneNumber\": 99999999,\r\n    \"role\": \"trader\",\r\n    \"verified\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/traders/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"traders",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createNewYield",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productName\": \"whole rice\",\r\n    \"postedPrice\": 100,\r\n    \"quantity\": 10,\r\n    \"seller\": 1,\r\n    \"available\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/yield/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"yield",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFarmerByMail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/farmers?email=user1@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"farmers"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "user1@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTraderByMail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/traders?email=trader3@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"traders"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "trader3@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAdminByMail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/admin?email=admin1@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "admin1@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createAdmin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"admin1@gmail.com\",\r\n    \"role\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/admin/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTrader",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 4,\r\n    \"email\": \"trader4@gmail.com\",\r\n    \"firstName\": \"t4\",\r\n    \"lastName\": \"lastName\",\r\n    \"phoneNumber\": 222222222,\r\n    \"role\": \"trader\",\r\n    \"verified\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/traders/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"traders",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
